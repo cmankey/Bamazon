@@ -27,14 +27,18 @@ connection.query('SELECT * FROM Products WHERE StockQuantity > 0', function(erro
         message: 'How many would you like to buy?'
     }]).then(function(answers) {
         var itemRow;
-        var i = 0;
-        do {
-            itemRow = results[i]
-            i++;
-        } while (itemRow.ItemID != answers.ID && i < results.length);
-        if (answers.quantity > itemRow.StockQuantity) {
+        var itemFound = false;
+        for (var i = 0; i < results.length; i++) {
+            if (results[i].ItemID == answers.ID) {
+                itemRow = results[i];
+                itemFound = true;
+                break;
+            }
+        }
+        if (!itemFound) {
+            console.log('No item with that ID is available.')
+        } else if (answers.quantity > itemRow.StockQuantity) {
             console.log('Insufficient quantity!');
-
         } else {
             connection.query('UPDATE Products SET ? WHERE ?', [{
                 StockQuantity : (itemRow.StockQuantity - answers.quantity)
