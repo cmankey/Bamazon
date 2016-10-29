@@ -30,5 +30,3 @@
 
 ![screen shot 15](/images/ss15.png)
 
-![screen shot 16](/images/ss16.png)
-
