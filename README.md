@@ -25,8 +25,3 @@
 ![screen shot 12](/images/ss12.png)
 
 ![screen shot 13](/images/ss13.png)
-
-![screen shot 14](/images/ss14.png)
-
-![screen shot 15](/images/ss15.png)
-
