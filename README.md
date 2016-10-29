@@ -1,7 +1,6 @@
 # Bamazon
 
 ![screen shot 1](/images/ss1.png)
-Format: ![Alt Text](url)
 
 ![screen shot 2](/images/ss2.png)
 Format: ![Alt Text](url)
